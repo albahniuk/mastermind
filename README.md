@@ -1,3 +1,9 @@
+This is the Mastermind game created with React. There are 10 rounds to guess the colors
+set. For each round the game will give you clues:
+a black chip means a chip with the right color in the right position,
+and a white chip means a color with de right color but in a wrong
+position.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
