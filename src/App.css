@@ -18,6 +18,11 @@
   margin-bottom: 10px;
 }
 
+.description {
+  font-size: 14px;
+  margin: 0 20vw;
+}
+
 .app-main {
   display: flex;
   align-items: center;
