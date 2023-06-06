@@ -7,7 +7,7 @@ function App() {
   const [roundColors, setRoundColors] = React.useState({});
   const [rowsData, setRowsData] = React.useState({});
   const [cluesData, setCluesData] = React.useState({});
-  const [finish, setFinish] = React.useState(true);
+  const [finish, setFinish] = React.useState(false);
   const [mastermindColors, setMastermindColors] = React.useState({});
   const colors = ["red", "blue", "white", "green", "black", "yellow"];
   const chipsRow = [1, 2, 3, 4];
