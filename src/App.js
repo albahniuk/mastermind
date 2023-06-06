@@ -7,7 +7,7 @@ function App() {
   const [roundColors, setRoundColors] = React.useState({});
   const [rowsData, setRowsData] = React.useState({});
   const [cluesData, setCluesData] = React.useState({});
-  const [finish, setFinish] = React.useState(false);
+  const [finish, setFinish] = React.useState(true);
   const [mastermindColors, setMastermindColors] = React.useState({});
   const colors = ["red", "blue", "white", "green", "black", "yellow"];
   const chipsRow = [1, 2, 3, 4];
@@ -42,23 +42,32 @@ function App() {
     const newCluesData = { ...cluesData };
     let clues = [];
     const newRoundColors = { ...roundColors };
+    const newMastermindColors = { ...mastermindColors };
+
+    // check same color and same position
     Object.keys(newRoundColors).forEach((key) => {
-      if (newRoundColors[key] === mastermindColors[key]) {
+      if (newRoundColors[key] === newMastermindColors[key]) {
         clues.push("black");
         delete newRoundColors[key];
-      } else {
-        Object.keys(mastermindColors).forEach((chip) => {
-          if (chip !== key && newRoundColors[key] === mastermindColors[chip]) {
-            clues.push("white");
-            delete newRoundColors[key];
-          }
-        });
+        delete newMastermindColors[key];
       }
+    });
+
+    // check same color but in wrong position
+    Object.keys(newRoundColors).forEach((key) => {
+      Object.keys(newMastermindColors).forEach((chip) => {
+        if (chip !== key && newRoundColors[key] === newMastermindColors[chip]) {
+          clues.push("white");
+          delete newRoundColors[key];
+          delete newMastermindColors[chip];
+        }
+      });
     });
 
     newCluesData[Number(selectedRow)] = clues;
     setCluesData(newCluesData);
 
+    // check if player won or it is the last round
     if (
       clues.length === chipsRow.length &&
       !clues.find((color) => color === "white")
