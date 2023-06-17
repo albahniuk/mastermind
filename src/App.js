@@ -22,7 +22,7 @@ function App() {
     });
 
     setMastermindColors(randomColors);
-  }, []);
+  }, [chipsRow, colors]);
 
   const handleClickColor = (color) => {
     let newRoundColors = { ...roundColors };
@@ -92,8 +92,7 @@ function App() {
       <header className="app-header">
         <h1 className="title">MASTERMIND</h1>
         <p className="description">
-          Welcome to the Mastermind game. You have 10 rounds to guess the colors
-          set of the Mastermind. For each round Mistermind will give you clues:
+          Welcome to the Mastermind game! You have 10 rounds to guess the hidden colors set, and for each round it will give you clues:
           a black chip means a chip with the right color in the right position,
           and a white chip means a color with de right color but in a wrong
           position. Good luck!

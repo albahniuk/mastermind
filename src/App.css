@@ -131,6 +131,9 @@
   justify-content: center;
   cursor: pointer;
 }
+.reset-btn:hover, .play-btn:hover {
+  box-shadow: 0 0 6px 1px #666;
+}
 
 .reset-btn svg {
   margin-right: 10px;
