@@ -93,8 +93,8 @@ function App() {
         <h1 className="title">MASTERMIND</h1>
         <p className="description">
           Welcome to the Mastermind game! You have 10 rounds to guess the hidden colors set, and for each round it will give you clues:
-          a black chip means a chip with the right color in the right position,
-          and a white chip means a color with de right color but in a wrong
+          a black chip means a right color in the right position,
+          and a white chip means a right color but in a wrong
           position. Good luck!
         </p>
       </header>
