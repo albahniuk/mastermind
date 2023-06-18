@@ -22,7 +22,7 @@ function App() {
     });
 
     setMastermindColors(randomColors);
-  }, [chipsRow, colors]);
+  }, []);
 
   const handleClickColor = (color) => {
     let newRoundColors = { ...roundColors };
