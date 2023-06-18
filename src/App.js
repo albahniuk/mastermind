@@ -21,6 +21,8 @@ function App() {
       randomColors[chip] = getRandomColor(colors);
     });
 
+    console.log(randomColors);
+
     setMastermindColors(randomColors);
   }, []);
 
