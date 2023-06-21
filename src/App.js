@@ -90,7 +90,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="title">MASTERMIND</h1>
+        <h1 className="title">Mastermind</h1>
         <p className="description">
           Welcome to the Mastermind game! You have 10 rounds to guess the hidden colors set, and for each round it will give you clues:
           a black chip means a right color in the right position,

@@ -1,6 +1,8 @@
 .app {
   text-align: center;
-  background-color: #282c34;
+  background-image: url(../public/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +18,7 @@
 .title {
   margin: 25px;
   margin-bottom: 10px;
+  animation: tracking-in-expand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .description {
@@ -33,6 +36,7 @@
   border-radius: 10px;
   margin: 20px;
   padding: 20px 0;
+  box-shadow: 0 0 6px 1px #666;
 }
 
 .row-mastermind {
@@ -88,6 +92,7 @@
 .colors-container {
   margin: 20px 0;
   background-color: #fafafa;
+  box-shadow: 0 0 6px 1px #666;
   border-radius: 10px;
   height: fit-content;
   padding: 8px;
@@ -123,7 +128,7 @@
   border: none;
   width: 100%; 
   border-radius: 10px;
-  background-color: #444;
+  background-color: #222;
   color: #fff;
   margin-top: 8px;
   display: flex;
@@ -137,5 +142,18 @@
 
 .reset-btn svg {
   margin-right: 10px;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
